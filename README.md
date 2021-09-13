@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# SUP : SignUp Portal
+## Resources : 
+- [User Login Form](https://heynode.com/tutorial/process-user-login-form-expressjs/)
+- [Auth -> React](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
+- [Gradient-BackGround](https://cssgradient.io/gradient-backgrounds/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
