@@ -1,9 +1,27 @@
 import React from "react";
-
+import axios from "axios";
 export default class Login extends React.Component {
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      email: this.email,
+      password: this.password,
+    };
+
+    console.log(data);
+    axios
+      .post("http://localhost:3000/signin", data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   render() {
     return (
-      <form>
+      <form onSubmit = {this.handleSubmit}>
         <h3>Sign In</h3>
 
         <div className="form-group">
@@ -12,6 +30,7 @@ export default class Login extends React.Component {
             type="email"
             className="form-control"
             placeholder="Enter email"
+            onChange={(e) => (this.email = e.target.value)}
           />
         </div>
 
@@ -21,6 +40,7 @@ export default class Login extends React.Component {
             type="password"
             className="form-control"
             placeholder="Enter password"
+            onChange={(e) => (this.password = e.target.value)}
           />
         </div>
 
